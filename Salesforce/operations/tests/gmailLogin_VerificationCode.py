@@ -29,6 +29,7 @@ class GmailLoginVerificationCode(BaseSetup):
         self.gmailpage.salesforce_mail_item()
         print('Opened the mail item')
         verification_code = self.gmailpage.get_verification_code()
+        print('Verification code is obtained from Mail')
         return verification_code
 
     def tear_down(self):
