@@ -32,7 +32,6 @@ class LoginPage(BaseSetup, DriverElements):
 
     def verification_code(self, code):
         self.sleep_time(5)
-        print(code)
         self.send_keys_to_element(map_driver_element.login_page.
                                   get('verificationCodeByXpath'), "xpath", code)
         self.click_on_element(map_driver_element.login_page.get('verifyButtonByXpath'), "xpath")
