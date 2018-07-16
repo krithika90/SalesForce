@@ -39,5 +39,5 @@ gmail_page = dict(
     inboxByXpath='//*[text()="COMPOSE"]',
     verificationMailItemByXpath='//span[@class="y2"]',
     trimmedContentByXpath='//div[@aria-label="Show trimmed content"]',
-    verificationCodeByXpath='//div[@class="HOEnZb"]'
+    verificationCodeByXpath='//div[contains(text(), "Verification Code") or @class="HOEnZb"]'
 )
