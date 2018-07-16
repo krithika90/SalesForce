@@ -7,7 +7,7 @@ new_user_details = dict(
     firstName="Krithika",
     lastName="S",
     jobTitle='Tester',
-    email="krithika19@yopmail.com",
+    email="krithika20@yopmail.com",
     phone="1234567830",
     company="NIL",
 )
