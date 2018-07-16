@@ -2,7 +2,6 @@ from bases.base_setup import BaseSetup
 from bases.driver_element import DriverElements
 from tests import map_driver_element
 from tests import user_details
-from pages.gmailPage import GmailPage
 
 class LoginPage(BaseSetup, DriverElements):
 
