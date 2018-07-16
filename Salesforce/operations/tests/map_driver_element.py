@@ -38,5 +38,6 @@ gmail_page = dict(
     navigateToGmailByXpath='//a[@href="https://mail.google.com"]',
     inboxByXpath='//*[text()="COMPOSE"]',
     verificationMailItemByXpath='//span[@class="y2"]',
+    trimmedContentByXpath='//div[@aria-label="Show trimmed content"]',
     verificationCodeByXpath='//div[@class="HOEnZb"]'
 )
