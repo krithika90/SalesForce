@@ -25,7 +25,8 @@ class SignUpPage(BaseSetup, DriverElements):
                                   user_details.new_user_details.get('lastName'))
 
     def enter_jobTitle(self):
-        self.driver.find_element_by_id('UserLastName').send_keys(Keys.TAB, Keys.ENTER, Keys.ARROW_DOWN, Keys.ENTER)
+        self.get_element(map_driver_element.signup_page.get('lastNameByID'), "id").\
+            send_keys(Keys.TAB, Keys.ENTER, Keys.ARROW_DOWN, Keys.ENTER)
 
     def enter_email(self):
         self.send_keys_to_element(map_driver_element.signup_page.get('emailByID'), "id",
@@ -41,7 +42,8 @@ class SignUpPage(BaseSetup, DriverElements):
 
     def select_number_of_employees(self):
 
-        self.driver.find_element_by_id('CompanyName').send_keys(Keys.TAB, Keys.ENTER, Keys.ARROW_DOWN, Keys.ENTER)
+        self.get_element(map_driver_element.signup_page.get('companyByID'), "id"). \
+            send_keys(Keys.TAB, Keys.ENTER, Keys.ARROW_DOWN, Keys.ENTER)
         # self.sleep_time(25)
         # self.click_on_element(map_driver_element.signup_page.get('employeesByXpath'), "xpath")
         # self.sleep_time(3)
