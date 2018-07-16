@@ -55,7 +55,7 @@ class GmailPage(BaseSetup, DriverElements):
 
     def get_verification_code(self):
         self.sleep_time(3)
-        self.driver.find_element_by_xpath('//div[@aria-label="Show trimmed content"]').click()
+        self.click_on_element(map_driver_element.gmail_page.get('trimmedContentByXpath'), "xpath")
         self.sleep_time()
         mailbody = self.get_element(map_driver_element.gmail_page.
                                     get('verificationCodeByXpath'), "xpath").text
@@ -65,5 +65,6 @@ class GmailPage(BaseSetup, DriverElements):
                 numbers = numbers+body
 
         verification_code = numbers[-5:]
+        print('Obtained verification code {0}'.format(verification_code))
         return verification_code
 
