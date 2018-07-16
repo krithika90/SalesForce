@@ -13,8 +13,8 @@ gmail.verify_Gmail_login_functionality()
 gmail.verify_if_gmail_is_logged_in()
 code = gmail.obtain_verification_code()
 sign.enter_verification_code(code)
-gmail.tear_down()
 
 sign.verify_signedup_user_is_logged_in()
 
+gmail.tear_down()
 sign.tear_down()
