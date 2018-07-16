@@ -17,47 +17,50 @@ class SignUpLoginFeature(BaseSetup):
 
     def verify_if_login_page_is_displayed(self):
         if self.loginpage.salesforce_logo():
-            print('1-SalesForce Login page is displayed..')
+            print('SalesForce Login page is displayed..')
         else:
-            print('1-SalesForce Login Page is not displayed')
+            print('SalesForce Login Page is not displayed')
 
     def verify_signup_functionality(self):
         self.loginpage.signup_link()
-        print('2-Navigated to SignUp Page')
+        print('Navigated to SignUp Page')
         self.signuppage.enter_firstName()
-        print('3-Entered First Name')
+        print('Entered First Name')
         self.signuppage.enter_lastName()
-        print('4-Entered Last Name')
+        print('Entered Last Name')
         self.signuppage.enter_jobTitle()
-        print('5-Entered Job Title')
+        print('Entered Job Title')
         self.signuppage.enter_email()
-        print('6-Entered Email')
+        print('Entered Email')
         self.signuppage.enter_phone()
-        print('7-Entered Phone number')
+        print('Entered Phone number')
         self.signuppage.enter_company()
-        print('8-Entered Company name')
+        print('Entered Company name')
         self.signuppage.select_number_of_employees()
-        print('9-Chose the number of employees')
+        print('Chose the number of employees')
         # self.signuppage.select_state()
-        # print('10-Chose the state')
+        # print('Chose the state')
         self.signuppage.agree_privacy()
-        print('11-Checked the Privacy Policy')
+        print('Checked the Privacy Policy')
         self.signuppage.click_free_trial()
-        print('12-Created user has auto logged in')
+        print('Created user has auto logged in')
 
     def verify_signedup_user_is_logged_in(self):
         if self.homepage.verify_header():
-            print('13-Header is displayed')
+            print('Header is displayed')
         if self.homepage.verify_page_title():
-            print('14-User is logged in and Home Page with Dashboard is viewed')
+            print('User is logged in and Home Page with Dashboard is viewed')
 
     def verify_login_functionality(self):
         self.loginpage.username_login()
+        print('Enter SalesForce Username')
         self.loginpage.password_login()
+        print('Enter SalesForce Password')
         self.loginpage.login()
 
     def enter_verification_code(self, code):
         self.loginpage.verification_code(code)
+        print('Enter the Verification Code obtained from GMail')
 
     def tear_down(self):
         self.basesetup.tear_down()
