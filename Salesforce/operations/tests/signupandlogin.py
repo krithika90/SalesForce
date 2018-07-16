@@ -47,7 +47,7 @@ class SignUpLoginFeature(BaseSetup):
 
     def verify_signedup_user_is_logged_in(self):
         if self.homepage.verify_header():
-            print('Header is displayed')
+            print('SalesForce Header is displayed')
         if self.homepage.verify_page_title():
             print('User is logged in and Home Page with Dashboard is viewed')
 
