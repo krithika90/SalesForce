@@ -10,7 +10,7 @@ class HomePage(BaseSetup, DriverElements):
         self.driver = driver
 
     def verify_header(self):
-        self.sleep_time(60)
+        self.sleep_time(30)
         boolean = self.element_is_visible(map_driver_element.home_page.get('headerByXpath'), "xpath")
         return boolean
 
